@@ -1,0 +1,19 @@
+<html>
+  <body>
+      <script type="text/javascript">
+        function createFrame()
+        {
+          iurl = document.getElementById('iurl');
+          frame = document.getElementById('frame');
+          frame.src = iurl.value;
+        }
+        function getURL()
+        {
+          iurl = document.getElementById('iurl');
+          iurl.value = "https://";
+        }
+      </script>
+  Input URL: <input type="submit" value="*" onclick="getURL()"><input type="text" value="https://" id="iurl"><input type="submit" value="Load" onclick="createFrame()"><br>
+	<iframe src="https://" height="100%" width="100%" frameborder="0" marginheight="0" marginwidth="0" id="frame"></iframe>
+  </body>
+</html>

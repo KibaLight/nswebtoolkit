@@ -1,0 +1,20 @@
+<html>
+  <body>
+	<script type="text/javascript">
+		function createEmbed()
+		{
+			cname = document.getElementById('cname');
+			player = document.getElementById('twitch-embed');
+			player.innerHTML = "";
+				new Twitch.Embed("twitch-embed", {
+				width: 1100,
+				height: 720,
+				channel: cname.value
+			});
+		}
+	</script>
+	Input channel name: <input type="text" id="cname"><input type="submit" value="Load" onclick="createEmbed()"><br>
+    <div id="twitch-embed" style="padding: 0px; margin: 0px; border-style: none;"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+  </body>
+</html>
